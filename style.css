@@ -1,0 +1,296 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*redes*/
+
+.social-icons {
+    z-index: 999;
+    position: fixed;
+    top: 80%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons a {
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+}
+
+.social-icons a.facebook {
+    background-color: #1877F2; 
+}
+
+.social-icons a.instagram {
+    background-color: #E1306C; 
+}
+
+.social-icons a.wasap {
+    background-color: #0df053; 
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+/*Header*/
+
+.header{
+    width: 100%;
+    min-height: 350px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.986),rgb(46, 104, 192)), url(imag/);
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav img{
+    width: 150px;
+}
+
+@keyframes blink {
+    0% {opacity: 1;
+    }
+    50% {opacity: 0;
+    }
+    100% {opacity: 1;
+    }
+}
+.blinking-image{
+    animation: blink 7s infinite;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links ul li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #3f5c79;
+    display: block;
+    margin: auto;
+}
+
+.nav-links ul li:hover::after{
+    width: 100px;
+}
+
+.lg{
+    display: inline-flex;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.lg img{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.lg a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 20px;
+}
+
+h2:hover{
+    color: rgb(0, 0, 0);
+}
+
+
+.slider-frame {
+    width: 100%;
+    height: auto;
+    margin: 5px auto 0;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 500%;
+    animation: slide 15s infinite alternate ease-in-out;
+}
+
+.slider-frame ul li {
+    list-style: none;
+    width: 100%;
+    position: relative;
+}
+
+.slider-frame ul li img {
+    width: 100%;
+}
+
+@keyframes slide {
+    0% { margin-left: 0%; }
+    12.5% { margin-left: 0%; }
+
+    15% { margin-left: -100%; }
+    27.5% { margin-left: -100%; }
+
+    30% { margin-left: -200%; }
+    42.5% { margin-left: -200%; }
+
+    45% { margin-left: -300%; }
+    57.5% { margin-left: -300%; }
+
+    60% { margin-left: -400%; }
+    100% { margin-left: -400%; }
+}
+
+/*consultas*/
+
+.consulta{
+    width: 60%;
+    height: 700px;
+    text-align: center;
+    background-image: linear-gradient(rgba(36, 86, 224, 0.986),rgb(1, 18, 43)), url(imag/);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 3px solid black;
+}
+
+.consulta h2{
+    padding: 15px 0;
+}
+
+.consul{
+    width: 100%;
+    display: block;
+}
+
+.in{
+    width: 77.5%;
+    margin: 15px 0;
+}
+
+.inp{
+    width: 77.5%;
+    margin: 15px 0;
+}
+
+
+/*footer*/
+
+.footer{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    background-image: url(img/casa_drywall.webp);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    position: relative;
+}
+.footer::before {
+    content: "";
+    background: rgba(0, 1, 2, 0.5); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.ns{
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.ns img{
+    border-radius: 25%;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+}
+
+.mapa{
+    width: 100%;
+    height: 100%;
+    padding-top: 1%;
+    z-index: 1;
+    margin: auto;
+}
+
+
+/* Estilo para tablets (pantallas de entre 600px y 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    nav {
+        text-align: left;
+    }
+    
+    nav a {
+        display: inline-block;
+        margin: 0 0.5rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+}
+
+
+
